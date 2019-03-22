@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 const Product = ({ price, inventory, title }) => (
   <div className="product-item">
-    <img className="product-image" alt={title} src={"/assets/images/" + title.toLowerCase() + ".svg"} />
     <div className="product-item-info">
       <div className="product-row-1">
         <div className="product-title">{title}</div>
