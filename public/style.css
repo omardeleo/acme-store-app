@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width:320px) {
+    .main {
+        padding: 0 15px;
+        background: #F5F5F5;
+    }
+    
+    .product-item-container {
+        min-width: 290px;
+        width: 100%;
+        background: white;
+    }
+
+    .product-item-info { 
+        width: inherit;
+        margin: 0 25px;
+    }
+
+    .product-image {
+        min-width: 290px;
+        width: 100%;
+    }
+
+    .product-item-container button {
+        width: 120px;
+        margin: 25px 25px;
+    }
+
+    .product-row-1 {
+        margin: 25px 0 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+} 
