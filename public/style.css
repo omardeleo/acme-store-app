@@ -17,7 +17,7 @@
     margin: 0;
     padding: 0;
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:767px) {
     .main {
         padding: 0 15px;
         background: #F5F5F5;
@@ -82,5 +82,4 @@
         outline: none;
     }
 
-    
 } 
