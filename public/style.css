@@ -84,7 +84,7 @@
     }
 } 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (max-width: 1279px) {
     body {
         padding: 0 50px;
         background: #F5F5F5;
@@ -128,6 +128,85 @@
     .product-title {
         font-family: "ChivoRegular", sans-serif;
         font-size: 28px;
+    }
+
+    .product-price {
+        font-family: "ChivoLight", sans-serif;
+        font-size: 21px;
+    }
+
+    .product-inventory {
+        font-family: "HelveticaNeue";
+        font-size: 12px;
+        color: #9B9B9B;
+    }
+
+    .product-button {
+        margin: 20px 25px 25px 25px;
+        border: 0;
+        border-radius: 20px;
+        background: #5E97D1;
+        color: white;
+        font-size: 14px;
+        white-space: nowrap;
+        text-decoration: none;
+        padding: 8px 20px;
+        cursor: pointer;
+        font-family: "ChivoLight", sans-serif;
+        max-width: 140px;
+    }
+
+    .product-button:focus {
+        outline: none;
+    }
+} 
+
+@media screen and (min-width:1280px) {
+    body {
+        background: #F5F5F5;
+    }
+
+    .main {
+        width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-item-container {
+        width: 100%;
+        background: white;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .product-image {
+        width: 455px;
+        height: 282px;
+        object-fit: cover;
+    }
+
+    .product-item-info { 
+        width: inherit;
+        margin: 0 25px;
+    }
+
+    .product-row-1 {
+        margin: 20px 0 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    .product-column-1 {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-title {
+        font-family: "ChivoRegular", sans-serif;
+        font-size: 38px;
     }
 
     .product-price {
