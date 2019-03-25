@@ -18,18 +18,64 @@
     padding: 0;
 }
 
+body {
+    background: #F5F5F5;
+}
+
+.product-item-container {
+    border-radius: 5px;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+}
+
+.product-item-info { 
+    width: inherit;
+}
+
+.product-row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.product-title {
+    font-family: "ChivoRegular", sans-serif;
+}
+
+.product-price {
+    font-family: "ChivoLight", sans-serif;
+}
+
+.product-inventory {
+    font-family: "HelveticaNeue";
+    font-size: 12px;
+    color: #9B9B9B;
+}
+
+.product-button {
+    border: 0;
+    border-radius: 20px;
+    background: #5E97D1;
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "ChivoLight", sans-serif;
+    padding: 8px 20px;
+}
+
+.product-button:focus {
+    outline: none;
+}
+
 @media screen and (max-width:767px) {
     body {
         padding: 0 15px;
-        background: #F5F5F5;
     }
     
     .product-item-container {
-        min-width: 290px;
-        width: 100%;
-        background: white;
-        border-radius: 5px;
-        overflow: hidden;
+        min-width: 290px; 
     }
 
     .product-image {
@@ -38,62 +84,33 @@
     }
 
     .product-item-info { 
-        width: inherit;
         margin: 0 25px;
     }
 
     .product-row-1 {
         margin: 20px 0 10px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .product-title {
-        font-family: "ChivoRegular", sans-serif;
         font-size: 21px;
     }
 
     .product-price {
-        font-family: "ChivoLight", sans-serif;
         font-size: 16px;
-    }
-
-    .product-inventory {
-        font-family: "HelveticaNeue";
-        font-size: 12px;
-        color: #9B9B9B;
     }
 
     .product-button {
         margin: 20px 25px 25px 25px;
-        border: 0;
-        border-radius: 20px;
-        background: #5E97D1;
-        color: white;
         font-size: 13px;
-        white-space: nowrap;
-        text-decoration: none;
-        padding: 8px 20px;
-        cursor: pointer;
-        font-family: "ChivoLight", sans-serif;
-    }
-
-    .product-button:focus {
-        outline: none;
     }
 } 
 
 @media screen and (min-width:768px) and (max-width: 1279px) {
     body {
         padding: 0 50px;
-        background: #F5F5F5;
     }
     
     .product-item-container {
-        width: 100%;
-        background: white;
-        overflow: hidden;
         display: flex;
     }
 
@@ -103,19 +120,8 @@
         object-fit: cover;
     }
 
-    .product-item-info { 
-        width: inherit;
-        margin: 0 25px;
-    }
-
     .product-row-1 {
-        /* width: 100%;
-         */
-        margin: 20px 0 10px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
+        margin-bottom: 10px;        
     }
 
     .product-column-1 {
@@ -123,49 +129,24 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 35px;
     }
 
     .product-title {
-        font-family: "ChivoRegular", sans-serif;
         font-size: 28px;
     }
 
     .product-price {
-        font-family: "ChivoLight", sans-serif;
         font-size: 21px;
     }
 
-    .product-inventory {
-        font-family: "HelveticaNeue";
-        font-size: 12px;
-        color: #9B9B9B;
-    }
-
     .product-button {
-        margin: 20px 25px 25px 25px;
-        border: 0;
-        border-radius: 20px;
-        background: #5E97D1;
-        color: white;
         font-size: 14px;
-        white-space: nowrap;
-        text-decoration: none;
-        padding: 8px 20px;
-        cursor: pointer;
-        font-family: "ChivoLight", sans-serif;
         max-width: 140px;
-    }
-
-    .product-button:focus {
-        outline: none;
     }
 } 
 
 @media screen and (min-width:1280px) {
-    body {
-        background: #F5F5F5;
-    }
-
     .main {
         width: 1120px;
         margin-left: auto;
@@ -173,9 +154,6 @@
     }
 
     .product-item-container {
-        width: 100%;
-        background: white;
-        overflow: hidden;
         display: flex;
     }
 
@@ -185,16 +163,8 @@
         object-fit: cover;
     }
 
-    .product-item-info { 
-        width: inherit;
-        margin: 0 25px;
-    }
-
     .product-row-1 {
-        margin: 20px 0 10px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
+        margin-bottom: 10px;
     }
 
     .product-column-1 {
@@ -202,40 +172,19 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 40px 50px;
     }
 
     .product-title {
-        font-family: "ChivoRegular", sans-serif;
         font-size: 38px;
     }
 
     .product-price {
-        font-family: "ChivoLight", sans-serif;
         font-size: 21px;
     }
 
-    .product-inventory {
-        font-family: "HelveticaNeue";
-        font-size: 12px;
-        color: #9B9B9B;
-    }
-
     .product-button {
-        margin: 20px 25px 25px 25px;
-        border: 0;
-        border-radius: 20px;
-        background: #5E97D1;
-        color: white;
         font-size: 14px;
-        white-space: nowrap;
-        text-decoration: none;
-        padding: 8px 20px;
-        cursor: pointer;
-        font-family: "ChivoLight", sans-serif;
         max-width: 140px;
-    }
-
-    .product-button:focus {
-        outline: none;
     }
 } 
