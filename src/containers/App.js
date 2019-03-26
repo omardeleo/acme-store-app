@@ -7,14 +7,16 @@ import CartContainer from './CartContainer'
 const App = ({store, isCartOpen}) => {
   return (
     <div className="main">
-      <div className="header-section">
-        <h2 className="header">Acme Store</h2>
-        <button onClick={() => store.dispatch({type: "TOGGLE_CART"})}>Shopping Cart</button>
-      </div>
-      <div className="hr" />
-      <ProductsContainer />
-      <hr />
-      {isCartOpen ? <CartContainer /> : ''}
+      {isCartOpen ? <CartContainer /> : 
+        <div>
+          <div className="header-section">
+            <h2 className="header">Acme Store</h2>
+            <button onClick={() => store.dispatch({ type: "TOGGLE_CART" })}>Shopping Cart</button>
+          </div>
+            <div className="hr" />
+          <ProductsContainer />
+        </div>
+      }
     </div>
   )
 }
