@@ -27,7 +27,6 @@ const App = ({store, isCartOpen, cartQty}) => {
 }
 
 const mapStateToProps = (state) => {
-
   return {
     isCartOpen: state.cart.isCartOpen,
     cartQty: state.cart.addedIds.length
