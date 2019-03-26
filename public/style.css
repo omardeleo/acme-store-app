@@ -40,10 +40,16 @@ body {
 
 .cart-button {
     margin-top: 20px;
+    font-family: "ChivoRegular", sans-serif;
+    font-size: 14px;
+    color: #292929;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
 }
 
 .fa-shopping-cart {
-    font-size: 12px;
+    margin-right: 5px;
 }
 
 .hr {
@@ -103,6 +109,23 @@ body {
         padding: 0 15px;
     }
     
+    .header-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 35px;
+        min-width: 290px;
+    }
+
+    .header {
+        font-size: 28px;
+    }
+
+    .cart-button {
+        margin-top: 0;
+        margin-left: -10px;
+    }
+
     .product-item-container {
         min-width: 290px; 
     }
