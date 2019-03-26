@@ -4,14 +4,18 @@ import { connect } from 'react-redux'
 import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
 
-const App = ({store, isCartOpen}) => {
+const App = ({store, isCartOpen, cartQty}) => {
+  const buttonText = cartQty ? `Your cart [${cartQty}]` : `Your cart is empty`
   return (
     <div className="main">
-      {isCartOpen ? <CartContainer /> : 
+      {isCartOpen ? <CartContainer store={store} /> : 
         <div>
           <div className="header-section">
             <h2 className="header">Acme Store</h2>
-            <button onClick={() => store.dispatch({ type: "TOGGLE_CART" })}>Shopping Cart</button>
+            <button className="cart-button" 
+              onClick={() => store.dispatch({ type: "TOGGLE_CART" })}>
+              {buttonText}
+            </button>
           </div>
             <div className="hr" />
           <ProductsContainer />
@@ -21,9 +25,12 @@ const App = ({store, isCartOpen}) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  isCartOpen: state.cart.isCartOpen
-})
+const mapStateToProps = (state) => {
+  return {
+    isCartOpen: state.cart.isCartOpen,
+    cartQty: state.cart.addedIds.length
+  }
+}
 
 export default connect(
   mapStateToProps,
