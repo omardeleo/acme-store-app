@@ -5,11 +5,12 @@ import { checkout } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Cart from '../components/Cart'
 
-const CartContainer = ({ products, total, checkout }) => (
+const CartContainer = ({ products, total, checkout, store }) => (
   <Cart
     products={products}
     total={total}
-    onCheckoutClicked={() => checkout(products)} />
+    onCheckoutClicked={() => checkout(products)} 
+    onToggleCart={() => store.dispatch({type: "TOGGLE_CART"})} />
 )
 
 CartContainer.propTypes = {
