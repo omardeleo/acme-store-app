@@ -9,7 +9,7 @@ const App = ({store, isCartOpen, cartQty}) => {
   return (
     <div className="main">
       {isCartOpen ? <CartContainer store={store} /> : 
-        <div>
+        <div className="main">
           <div className="header-section">
             <h2 className="header">Acme Store</h2>
             <button className="cart-button" 
@@ -26,6 +26,7 @@ const App = ({store, isCartOpen, cartQty}) => {
 }
 
 const mapStateToProps = (state) => {
+
   return {
     isCartOpen: state.cart.isCartOpen,
     cartQty: state.cart.addedIds.length

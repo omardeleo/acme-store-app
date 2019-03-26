@@ -4,7 +4,7 @@ import Product from './Product'
 
 const Cart  = ({ products, total, onCheckoutClicked, onToggleCart }) => {
   const hasProducts = products.length > 0
-  const nodes = hasProducts ? (
+  const nodes = false ? (
     products.map(product =>
       <Product
         title={product.title}
@@ -14,19 +14,28 @@ const Cart  = ({ products, total, onCheckoutClicked, onToggleCart }) => {
       />
     )
   ) : (
-    <em>Please add some products to cart.</em>
+    <div className="cart-text">
+      Please add some products to your cart.
+    </div>
   )
 
   return (
-    <div>
-      <h3>Your Cart</h3>
-      <div>{nodes}</div>
-      <p>Total: &#36;{total}</p>
-      <button onClick={onToggleCart}>X</button>
-      <button onClick={onCheckoutClicked}
-        disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
-      </button>
+    <div className="cart-container">
+      <div className="cart-modal">
+        <div className="button-container">
+          <img className="close-cart-button" 
+            src="assets/images/close_btn.png" 
+            onClick={onToggleCart} />
+        </div>
+        <h3 className="cart-header">Your cart</h3>
+        <div className="hr"></div>
+        <div className="cart-content">
+          <div className="cart-message">
+            <img className="cart-icon" src="assets/images/cart.png" />
+            {nodes}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
