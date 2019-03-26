@@ -12,10 +12,11 @@ const App = ({store, isCartOpen, cartQty}) => {
         <div className="main">
           <div className="header-section">
             <h2 className="header">Acme Store</h2>
-            <button className="cart-button" 
+            <div className="cart-button" 
               onClick={() => store.dispatch({ type: "TOGGLE_CART" })}>
+              <i className="fas fa-shopping-cart"></i>
               {buttonText}
-            </button>
+            </div>
           </div>
             <div className="hr" />
           <ProductsContainer />
